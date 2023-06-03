@@ -25,7 +25,7 @@ if(isset($_POST["register"]))
 	";
 	$statement = $connect->prepare($check_query);
 	$check_data = array(
-		':username'		=>	$username
+		':username'=>$username
 	);
 	if($statement->execute($check_data))	
 	{
@@ -53,8 +53,8 @@ if(isset($_POST["register"]))
 			if($message == '')
 			{
 				$data = array(
-					':username'  =>	$username,
-					':password'	  =>password_hash($password, PASSWORD_DEFAULT)
+					':username'=>$username,
+					':password'=>password_hash($password, PASSWORD_DEFAULT)
 				);
 
 				$query = "
